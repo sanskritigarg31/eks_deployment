@@ -8,9 +8,6 @@ WORKDIR /health-app/patient-service
 COPY package*.json ./
 RUN npm install
 
-# Copy all files
-COPY . .
-
 # Expose port 3000
 EXPOSE 3000
 
