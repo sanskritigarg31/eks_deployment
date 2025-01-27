@@ -8,9 +8,6 @@ WORKDIR /health-app/appointment-service
 COPY package*.json ./
 RUN npm install
 
-# Copy all files
-COPY . .
-
 # Expose port 3001
 EXPOSE 3001
 
