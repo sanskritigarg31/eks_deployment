@@ -23,7 +23,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Terraform
+      - name: Instal
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: latest
