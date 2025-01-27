@@ -25,7 +25,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::539935451710:role/github-actions
-          role-session-name: GitHubActions
+          role-session-name: github-actions
           aws-region: ap-south-1
       
       - name: Terraform Format (Lint)
