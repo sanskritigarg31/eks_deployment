@@ -11,7 +11,8 @@ on:
 jobs:
   terraform:
     runs-on: ubuntu-latest
-    
+    env:
+       AWS_REGION : ap-south-1
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,7 +27,12 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::539935451710:role/github-actions
           role-session-name: github-actions
-          aws-region: ap-south-1
+          aws-region: ${{ env.AWS_REGION }}
+      
+      # Hello from AWS: WhoAmI
+      - name: Sts GetCallerIdentity
+        run: |
+          aws sts get-caller-identity
       
       - name: Terraform Format (Lint)
         run: terraform fmt -check -recursive
