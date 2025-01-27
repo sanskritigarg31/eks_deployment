@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  patient-service:
+    build: /patient-service
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+
+  appointment-service:
+    build: /appointment-service
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+
