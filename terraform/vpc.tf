@@ -4,11 +4,11 @@ provider "aws" {
     secret_key = var.secret_key
 }
 
-resource "aws_vpc" "Default-VPC" {
+resource "aws_vpc" "Default-VPC-1" {
     cidr_block = "10.0.0.0/16"
     instance_tenancy = "default" 
     tags = {
-        name = "Default-VPC"
+        name = "Default-VPC-1"
     }
 }   
 
